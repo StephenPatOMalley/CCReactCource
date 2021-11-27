@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import MeetupList from '../components/meetups/MeetupList';
+import classes from './AllMeetups.module.css';
 
 function AllMeetupsPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -40,8 +41,15 @@ function AllMeetupsPage() {
   }
 
   return (
-    <section>
-      <h1>All Meetups</h1>
+    <section className={classes.AllMeetupsPage}>
+      <table className ={classes.table}>
+        <tr>
+          <th>Name</th>
+          <th>Student Number</th>
+          <th>Room Number</th>
+          <th>Class Duration(Hours)</th>
+        </tr>
+      </table>
       <MeetupList meetups={loadedMeetups} />
     </section>
   );

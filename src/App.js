@@ -2,6 +2,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import AllMeetupsPage from './pages/AllMeetups';
 import NewMeetupPage from './pages/NewMeetup';
+import SensorPage from './pages/Sensor';
 
 import Layout from './components/layout/Layout';
 
@@ -14,6 +15,9 @@ function App() {
         </Route>
         <Route path='/new-meetup'>
           <NewMeetupPage />
+        </Route>
+        <Route path='/sensor'>
+          <SensorPage />
         </Route>
       </Switch>
     </Layout>

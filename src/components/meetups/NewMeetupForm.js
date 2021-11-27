@@ -4,24 +4,24 @@ import Card from '../ui/Card';
 import classes from './NewMeetupForm.module.css';
 
 function NewMeetupForm(props) {
-  const titleInputRef = useRef();
-  const imageInputRef = useRef();
-  const addressInputRef = useRef();
-  const descriptionInputRef = useRef();
+  const nameInputRef = useRef();
+  const studentNumInputRef = useRef();
+  const roomInputRef = useRef();
+  const classDurationInputRef = useRef();
 
   function submitHandler(event) {
     event.preventDefault();
 
-    const enteredTitle = titleInputRef.current.value;
-    const enteredImage = imageInputRef.current.value;
-    const enteredAddress = addressInputRef.current.value;
-    const enteredDescription = descriptionInputRef.current.value;
+    const enteredName = nameInputRef.current.value;
+    const enteredStudent = studentNumInputRef.current.value;
+    const enteredroom = roomInputRef.current.value;
+    const enteredDuration = classDurationInputRef.current.value;
 
     const meetupData = {
-      title: enteredTitle,
-      image: enteredImage,
-      address: enteredAddress,
-      description: enteredDescription,
+      name: enteredName,
+      student: enteredStudent,
+      room: enteredroom,
+      duration: enteredDuration,
     };
 
     props.onAddMeetup(meetupData);
@@ -31,28 +31,33 @@ function NewMeetupForm(props) {
     <Card>
       <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
-          <label htmlFor='title'>Meetup Title</label>
-          <input type='text' required id='title' ref={titleInputRef} />
+          <label htmlFor='name'>Student Name</label>
+          <input type='text' required id='name' ref={nameInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor='image'>Meetup Image</label>
-          <input type='url' required id='image' ref={imageInputRef} />
+          <label htmlFor='student'>Student Number</label>
+          <input type='text' required id='student' ref={studentNumInputRef} />
         </div>
         <div className={classes.control}>
-          <label htmlFor='address'>Address</label>
-          <input type='text' required id='address' ref={addressInputRef} />
+          <label htmlFor='room'>Room Number</label>
+          <select required id='student' ref={roomInputRef}>            
+            <option value="501">501</option>
+            <option value="502">502</option>
+            <option value="503">503</option>
+            <option value="504">504</option>
+            <option value="505">505</option>
+            <option value="506">506</option>
+            <option value="507">507</option>
+            <option value="508">508</option>
+            <option value="509">509</option>
+          </select>
         </div>
         <div className={classes.control}>
-          <label htmlFor='description'>Description</label>
-          <textarea
-            id='description'
-            required
-            rows='5'
-            ref={descriptionInputRef}
-          ></textarea>
+          <label htmlFor='duration'>Class Duration</label>
+          <input type='text' required id='duration' ref={classDurationInputRef} />
         </div>
         <div className={classes.actions}>
-          <button>Add Meetup</button>
+          <button>Add Student</button>
         </div>
       </form>
     </Card>

@@ -1,6 +1,6 @@
-.MeetupItem {
-  width: 100%;
-  display: flex;
+.SensorItem {
+  width: 200px;
+  display: table;
   justify-content: center;
   align-items: center;
 }
@@ -9,9 +9,9 @@ table {
   border: 2px solid forestgreen;
   width: 1000px;
   height: 80px;
+  box-align: center;
 }
 
 td {
   text-align: center;
-  width: 250px;
 }

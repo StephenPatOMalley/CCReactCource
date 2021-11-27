@@ -1,6 +1,5 @@
 .MeetupItem {
   width: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -8,10 +7,12 @@
 table {
   border: 2px solid forestgreen;
   width: 1000px;
-  height: 80px;
+  height: 100px;
 }
-
-td {
+  
+th {
+  border-bottom: 1px solid black;
   text-align: center;
   width: 250px;
 }
+  
