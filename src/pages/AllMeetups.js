@@ -41,17 +41,19 @@ function AllMeetupsPage() {
   }
 
   return (
-    <section className={classes.AllMeetupsPage}>
-      <table className ={classes.table}>
-        <tr>
-          <th>Name</th>
-          <th>Student Number</th>
-          <th>Room Number</th>
-          <th>Class Duration(Hours)</th>
-        </tr>
-      </table>
+    <form>
+      <div>
+        <table className ={classes.table}>
+          <tr>
+            <th>Name</th>
+            <th>Student Number</th>
+            <th>Room Number</th>
+            <th>Class Duration(Hours)</th>
+          </tr>
+        </table>
+      </div>
       <MeetupList meetups={loadedMeetups} />
-    </section>
+    </form>
   );
 }
 

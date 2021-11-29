@@ -1,18 +1,11 @@
-.MeetupItem {
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-  
+
+
 table {
   border: 2px solid forestgreen;
   width: 1000px;
   height: 100px;
-}
   
-th {
-  border-bottom: 1px solid black;
-  text-align: center;
-  width: 250px;
+  justify-content: center;
+  align-items: center;
 }
   

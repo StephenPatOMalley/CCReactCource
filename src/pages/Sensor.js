@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import SensorList from '../components/Sensor/SensorList';
+import classes from './Sensor.module.css';
 
 function SensorPage() {
     const [isLoading, setIsLoading] = useState(true);
@@ -40,9 +41,11 @@ function SensorPage() {
     }
   
     return (
-      <section>
-        <SensorList rooms={loadedRooms}/>
-      </section>
+      <form className={classes.SensorItem}>
+        <div>
+          <SensorList rooms={loadedRooms}/>
+        </div>
+      </form>
     );
   }
 
